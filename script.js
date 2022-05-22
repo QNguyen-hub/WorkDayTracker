@@ -93,10 +93,10 @@ function colorBlock() {
 }
 saveBtn.addEventListener("click", function (event) {
   event.preventDefault();
-  for (let i = 1; i < 10; i++) {
-    var value = document.querySelector(".work" + [i]).value;
-    localStorage.setItem("Work", value);
-  }
+  var schedule = document.querySelectorAll("textarea").value;
+  schedule.forEach(function () {
+    localStorage.setItem("Work", schedule);
+  });
 });
 
 colorBlock();
