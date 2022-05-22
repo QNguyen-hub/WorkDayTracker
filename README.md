@@ -5,3 +5,5 @@ The text area will be save to local storage and will be availabe after refreshin
 The toughest part is how to iterate throught the time block in the html file.
 
 I went with each individual block instead to get the correct color to appear in the text block
+
+currently I am running into how getting each one to save to localstorage.
