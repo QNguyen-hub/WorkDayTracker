@@ -11,6 +11,8 @@ var two = document.querySelector("#twopm");
 var three = document.querySelector("#threepm");
 var four = document.querySelector("#fourpm");
 var five = document.querySelector("#fivepm");
+var saveBtn = document.querySelector(".saveBtn");
+
 var timer = function () {
   var date = moment().format("MMMM Do YYYY, h:mm:ss a");
   currentDate.textContent = date;
@@ -89,6 +91,12 @@ function colorBlock() {
     five.setAttribute("class", "future");
   }
 }
+saveBtn.addEventListener("click", function (event) {
+  event.preventDefault();
+  for (let i = 1; i < 10; i++) {
+    var value = document.querySelector(".work" + [i]).value;
+    localStorage.setItem("Work", value);
+  }
+});
 
-console.log(currentTime);
 colorBlock();
